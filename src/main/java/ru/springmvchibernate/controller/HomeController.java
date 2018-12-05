@@ -32,6 +32,18 @@ public class HomeController {
 	@Autowired
 	private RoleService roleService;
 
+	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
+	public String getWelcome(){
+		return "welcome";
+	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String loginPage(ModelMap modelMap) {
+		return "login";
+	}
+
+/*
+
 	@RequestMapping("/test")
 	public String getIndex(Model model){
 		List<User> users = userService.getAllUsers();
@@ -138,15 +150,7 @@ public class HomeController {
 	}
 
 	
-	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
-	public String getWelcome(){
-		return "welcome";
-	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String loginPage(ModelMap modelMap) {
-		return "login";
-	}
 
 
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
@@ -295,6 +299,6 @@ public class HomeController {
 		userService.saveUser(user);
 		return "redirect:/";
 	}
-
+*/
 
 }

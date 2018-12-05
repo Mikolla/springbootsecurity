@@ -12,7 +12,7 @@ public class PropertiesReader {
 	}
 
 	private static void setFileName() {
-	    fileName = "hibernate.properties";
+	    fileName = "application.properties";
 	}
 
 	public static String getProperties(String name) {
