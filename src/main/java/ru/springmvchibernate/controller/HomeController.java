@@ -42,7 +42,7 @@ public class HomeController {
 		return "login";
 	}
 
-/*
+
 
 	@RequestMapping("/test")
 	public String getIndex(Model model){
@@ -299,6 +299,6 @@ public class HomeController {
 		userService.saveUser(user);
 		return "redirect:/";
 	}
-*/
+
 
 }
